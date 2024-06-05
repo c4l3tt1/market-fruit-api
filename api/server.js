@@ -1,32 +1,32 @@
+// See https://github.com/typicode/json-server#module
 const jsonServer = require("json-server");
-const fs = require("fs");
-const path = require("path");
-const os = require("os");
-
-// Caminhos dos arquivos
-const dbFile = path.join(__dirname, "data.json");
-const tmpDbFile = path.join(os.tmpdir(), "data.json");
-
-// Copiar data.json para o diretório temporário
-fs.copyFileSync(dbFile, tmpDbFile);
 
 const server = jsonServer.create();
-const router = jsonServer.router(tmpDbFile);
+
+// Uncomment to allow write operations
+const fs = require("fs");
+const path = require("path");
+const filePath = path.join("data.json");
+const data = fs.readFileSync(filePath, "utf-8");
+const db = JSON.parse(data);
+const router = jsonServer.router(db);
+
+// Comment out to allow write operations
+//const router = jsonServer.router('data.json')
+
 const middlewares = jsonServer.defaults();
 
-// Middleware CORS
-const cors = require("cors");
+server.use(middlewares);
+// Add this before server.use(router)
 server.use(
-  cors({
-    origin: "*", // Permitir todas as origens. Para mais segurança, especifique os domínios permitidos.
-    methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
-    allowedHeaders: ["Content-Type", "Authorization"], // Cabeçalhos permitidos
+  jsonServer.rewriter({
+    "/api/*": "/$1",
   })
 );
-
-server.use(middlewares);
 server.use(router);
-
 server.listen(3000, () => {
   console.log("JSON Server is running");
 });
+
+// Export the Server API
+module.exports = server;
