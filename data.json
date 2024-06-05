@@ -1,4 +1,59 @@
 {
-  "buckets": [],
-  "fruits": []
+  "buckets": [
+    {
+      "name": "Bucket 1",
+      "totalPrice": 0,
+      "ocupation": 0,
+      "capacity": 2,
+      "fruitsList": [],
+      "id": "b516"
+    },
+    {
+      "name": "Bucket 2",
+      "totalPrice": 0,
+      "ocupation": 0,
+      "capacity": 5,
+      "fruitsList": [],
+      "id": "037e"
+    },
+    {
+      "name": "Bucket 3",
+      "totalPrice": 0,
+      "ocupation": 0,
+      "capacity": 10,
+      "fruitsList": [],
+      "id": "ccff"
+    },
+    {
+      "id": "7b6e",
+      "name": "Bucket 4",
+      "capacity": 1,
+      "totalPrice": 0,
+      "ocupation": 0,
+      "fruitsList": []
+    }
+  ],
+  "fruits": [
+    {
+      "id": "e9af",
+      "name": "Banana",
+      "price": "0,50",
+      "quantity": 0,
+      "isInsideBucket": false
+    },
+    {
+      "id": "d7b2",
+      "name": "Maçã",
+      "price": "0,25",
+      "quantity": 0,
+      "isInsideBucket": false
+    },
+    {
+      "id": "7d80",
+      "name": "Melancia",
+      "price": "5,00",
+      "quantity": 0,
+      "isInsideBucket": false
+    }
+  ]
 }
