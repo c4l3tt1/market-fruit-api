@@ -54,6 +54,13 @@
       "price": "5,00",
       "quantity": 0,
       "isInsideBucket": false
+    },
+    {
+      "id": "7d81",
+      "name": "Mamão",
+      "price": "1,00",
+      "quantity": 0,
+      "isInsideBucket": false
     }
   ]
 }
