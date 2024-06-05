@@ -23,22 +23,6 @@
       "capacity": 10,
       "fruitsList": [],
       "id": "ccff"
-    },
-    {
-      "id": "7b6e",
-      "name": "Bucket 4",
-      "capacity": 1,
-      "totalPrice": 0,
-      "ocupation": 0,
-      "fruitsList": []
-    },
-    {
-      "id": "7b6f",
-      "name": "Bucket 5",
-      "capacity": 15,
-      "totalPrice": 0,
-      "ocupation": 0,
-      "fruitsList": []
     }
   ],
   "fruits": [
